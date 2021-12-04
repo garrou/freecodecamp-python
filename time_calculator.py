@@ -1,7 +1,7 @@
 DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 AM_PM = ["AM", "PM"]
 
-def add_time(start, duration, day=None):
+def add_time(start, duration, day=None) -> str:
 
     [start_hours, start_minutes, meridian] = map(lambda x: int(x) if x.isdigit() else x, start.replace(":", " ").split(" "))
     [duration_hours, duration_minutes] = map(lambda x: int(x), duration.split(":"))
