@@ -41,12 +41,16 @@ def count_matches(drawn, expected) -> int:
             return 0
     return 1
 
-hat = Hat(yellow=5, red=1, green=3, blue=9, test=1)
-probability = experiment(hat=hat, expected_balls={"yellow":2, "blue":3, "test":1}, num_balls_drawn=20, num_experiments=100)
-print(probability)
-# expected: 1.0
+def main():
+    hat = Hat(yellow=5, red=1, green=3, blue=9, test=1)
+    probability = experiment(hat=hat, expected_balls={"yellow":2, "blue":3, "test":1}, num_balls_drawn=20, num_experiments=100)
+    print(probability)
+    # expected: 1.0
 
-hat = Hat(blue=3, red=2, green=6)
-probability = experiment(hat=hat, expected_balls={"blue":2, "green":1}, num_balls_drawn=4, num_experiments=1000)
-print(probability)
-# expected: 0.272
+    hat = Hat(blue=3, red=2, green=6)
+    probability = experiment(hat=hat, expected_balls={"blue":2, "green":1}, num_balls_drawn=4, num_experiments=1000)
+    print(probability)
+    # expected: 0.272
+
+if __name__ == "__main__":
+    main()
